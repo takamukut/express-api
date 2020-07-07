@@ -15,6 +15,8 @@ app.use(express.urlencoded({ extended: true }))
 // Routing test
 const router: express.Router = express.Router()
 router.get('/api/getTest', (req:express.Request, res:express.Response) => {
+  console.log('GET REQUEST')
+  console.log(req.query)
   res.send(req.query)
 })
 router.post('/api/postTest', (req:express.Request, res:express.Response) => {
